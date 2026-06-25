@@ -2,11 +2,13 @@ package org.example;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Objects;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Book {
@@ -14,9 +16,6 @@ public class Book {
     private String author;
     private int pages;
     private int year;
-
-    public Book() {
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -33,7 +32,7 @@ public class Book {
         return Objects.hash(title, author, pages, year);
     }
 
-    public String toString(){
+    public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("Название: ").append(getTitle()).append(System.lineSeparator())
                 .append("Автор: ").append(getAuthor()).append(System.lineSeparator())

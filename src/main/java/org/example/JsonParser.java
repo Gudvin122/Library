@@ -23,10 +23,7 @@ public class JsonParser {
         }
 
         students.stream()
-                .map(Student::getName)
-                .forEach(System.out::println);
-
-        students.stream()
+                .peek(s -> System.out.println(s.getName()))
                 .map(Student::getBooks)
                 .forEach(System.out::println);
 
